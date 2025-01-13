@@ -47,7 +47,25 @@ Digident is a full-stack application that connects to the Digident Device using 
     python main.py
     ```
 
-##
+### Important Cofiguration for Custom IP Address for the UDP Connection
+
+1. Navigate to this path `cd frontend\lib\config\app_config.dart` and change the IP Address in the frontend app
+
+    ```dart
+    static const String SERVER_IP = '172.27.33.57';//Your IP Address of the Computer or ESP32 Module
+    ```
+
+2. Navigate to this path `backend\config.py` and change the IP Address in the backend server
+
+    ```dart
+    SERVER_CONFIG = {
+        'HOST': '172.27.33.57', //Write your IP Address of the server here(Computer of ESP 32)
+        'PORT': 5000,
+        'FRAME_WIDTH': 640,
+        'FRAME_HEIGHT': 480,
+        'JPEG_QUALITY': 80
+    }
+    ```
 
 ### Contributing
 

@@ -1,4 +1,4 @@
 class AppConfig {
-  static const String SERVER_IP = '172.27.111.74'; // Your computer's IP Address
+  static const String SERVER_IP = '172.27.33.57';
   static const int SERVER_PORT = 5000;
 }
