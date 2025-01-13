@@ -9,7 +9,7 @@ class CameraViewScreen extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).colorScheme.surface,
       appBar: AppBar(
-        title: const Text('UDP Camera Stream'),
+        title: const Text('DigiDent Device Stream'),
         centerTitle: true,
         elevation: 2,
         backgroundColor: Theme.of(context).colorScheme.primaryContainer,
@@ -19,6 +19,7 @@ class CameraViewScreen extends StatelessWidget {
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
+              // Camera view
               Expanded(
                 child: Container(
                   margin: const EdgeInsets.all(16.0),
@@ -32,6 +33,7 @@ class CameraViewScreen extends StatelessWidget {
                   ),
                 ),
               ),
+              // Make sure ... message
               Padding(
                 padding: const EdgeInsets.all(16.0),
                 child: Row(
@@ -41,11 +43,12 @@ class CameraViewScreen extends StatelessWidget {
                       Icons.info_outline,
                       color: Theme.of(context).colorScheme.primary,
                     ),
-                    const SizedBox(width: 8),
+                    const SizedBox(width: 5),
                     Text(
-                      'Make sure server is running',
+                      'Make sure you are connected to the DigiDent WiFi',
                       style: TextStyle(
                         color: Theme.of(context).colorScheme.primary,
+                        fontSize: 12,
                       ),
                     ),
                   ],
