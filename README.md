@@ -35,7 +35,7 @@ Digident is a full-stack application that connects to the Digident Device using 
     cd digident/backend
     ```
 
-2. Install the required Python packages:
+2. Install the required Python packages (Must Install Python and Pip before):
 
     ```sh
     pip install -r requirements.txt
