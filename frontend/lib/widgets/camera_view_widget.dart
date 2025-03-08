@@ -172,8 +172,8 @@ class _CameraViewWidgetState extends State<CameraViewWidget> {
             padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 6),
             decoration: BoxDecoration(
               color: _isConnected
-                  ? Colors.green.withAlpha((0.7 * 255).toInt())
-                  : Colors.red.withAlpha((0.7 * 255).toInt()),
+                  ? Colors.green.withValues(alpha: 0.8)
+                  : Colors.red.withValues(alpha: 0.8),
               borderRadius: BorderRadius.circular(20),
             ),
             child: Row(

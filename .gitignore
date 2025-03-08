@@ -1,60 +1,83 @@
-# Dart & Flutter
+# Flutter/Dart specific
 .dart_tool/
 .flutter-plugins
 .flutter-plugins-dependencies
 .packages
+.pub-cache/
+.pub/
 build/
 pubspec.lock
 generated_plugin_registrant.dart
+**/doc/api/
+**/ios/Flutter/.last_build_id
 
-# iOS & Android Specific
+# Generated app icons
+**/android/app/src/main/res/mipmap*/
+**/ios/Runner/Assets.xcassets/AppIcon.appiconset/
+**/web/icons/
+**/windows/runner/resources/app_icon*
+**/macos/Runner/Assets.xcassets/AppIcon.appiconset/
+
+# Assets management
+!**/assets/
+!**/assets/images/
+**/assets/images/*
+!**/assets/images/.gitkeep
+!**/assets/images/digident_logo.png
+
+# iOS & Android specific
 ios/Pods/
 android/.gradle/
 android/app/debug.keystore
+/android/app/debug
+/android/app/profile
+/android/app/release
 
-# Misc
-*.log
+# Symbolication & obfuscation
+app.*.symbols
+app.*.map.json
+
+# IDE related
 *.iml
+*.ipr
+*.iws
+.idea/
+.vscode/
+
+# System files
+*.log
 *.swp
 *.swo
 *.swn
-*.DS_Store
+.DS_Store
+.atom/
+.build/
+.buildlog/
+.history
+.svn/
+.swiftpm/
+migrate_working_dir/
 
-# Virtual Environment
+# Python related
 venv/
 .env
 __pycache__/
 *.pyc
 *.pyo
 *.pyd
-*.log
 
-# Dependency Management
+# Dependency management
 Pipfile
 Pipfile.lock
 poetry.lock
 
-# Django/Flask (if used)
+# Database
 instance/
 *.sqlite3
 db.sqlite3
 migrations/
 
-# Misc
-*.DS_Store
-# Node
-node_modules
-# Package
-package
-# Dependencies
-dependencies
-# IDE
-.idea
-# VSCode
-.vscode
-# Build
-/build
-# Dist
-/dist
-# Logs
-/logs
+# Other
+node_modules/
+/dist/
+/logs/

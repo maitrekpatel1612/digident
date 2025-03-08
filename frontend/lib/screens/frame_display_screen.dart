@@ -146,7 +146,7 @@ class FrameDisplayScreen extends StatelessWidget {
 
       // Generate a unique filename with timestamp
       final timestamp = DateFormat('yyyyMMdd_HHmmss').format(DateTime.now());
-      final filePath = '$imagesPath/digident_capture_${timestamp}.jpg';
+      final filePath = '$imagesPath/digident_capture_$timestamp.jpg';
       
       // Save the image
       final file = File(filePath);
@@ -193,7 +193,8 @@ class FrameDisplayScreen extends StatelessWidget {
       backgroundColor: isDarkMode ? Colors.black : Colors.white,
       appBar: AppBar(
         title: const Text('Captured Frame'),
-        backgroundColor: isDarkMode ? Colors.grey[900] : Colors.blue.shade700,
+        backgroundColor: isDarkMode ? Colors.grey[900] : Colors.blue.shade600,
+        foregroundColor: Colors.white,
         elevation: 4,
         actions: [
           IconButton(
@@ -225,8 +226,8 @@ class FrameDisplayScreen extends StatelessWidget {
                       boxShadow: [
                         BoxShadow(
                           color: isDarkMode 
-                              ? Colors.blue.withAlpha(40) 
-                              : Colors.grey.withAlpha(100),
+                              ? Colors.blue.withValues(alpha: 0.16) 
+                              : Colors.grey.withValues(alpha: 0.4),
                           blurRadius: 10,
                           spreadRadius: 1,
                         ),
@@ -253,17 +254,6 @@ class FrameDisplayScreen extends StatelessWidget {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
-                    _buildActionButton(
-                      context,
-                      icon: Icons.edit,
-                      label: 'Edit',
-                      color: Colors.orange,
-                      onPressed: () {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Edit functionality coming soon')),
-                        );
-                      },
-                    ),
                     _buildActionButton(
                       context,
                       icon: Icons.save_alt,

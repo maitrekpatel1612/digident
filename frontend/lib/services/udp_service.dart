@@ -8,6 +8,7 @@ class UDPService {
   Timer? _heartbeatTimer;
   Timer? _connectionTimeoutTimer;
   bool _isConnected = false;
+  final AppConfig _appConfig = AppConfig();
 
   final List<List<int>> _chunks = [];
   int _expectedChunks = 0;
@@ -19,6 +20,9 @@ class UDPService {
   Future<void> initialize() async {
     try {
       await dispose();
+      
+      // Initialize app config to get the latest server settings
+      await _appConfig.init();
 
       _socket = await RawDatagramSocket.bind(InternetAddress.anyIPv4, 0);
       _setupSocketListeners();
@@ -107,8 +111,8 @@ class UDPService {
     try {
       _socket?.send(
         'connect'.codeUnits,
-        InternetAddress(AppConfig.serverIp),
-        AppConfig.serverPort,
+        InternetAddress(_appConfig.serverIp),
+        _appConfig.serverPort,
       );
     } catch (e) {
       onError?.call('Failed to send connect message: $e');
