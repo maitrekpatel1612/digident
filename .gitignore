@@ -1,1 +1,60 @@
-node_modules    
+# Dart & Flutter
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+build/
+pubspec.lock
+generated_plugin_registrant.dart
+
+# iOS & Android Specific
+ios/Pods/
+android/.gradle/
+android/app/debug.keystore
+
+# Misc
+*.log
+*.iml
+*.swp
+*.swo
+*.swn
+*.DS_Store
+
+# Virtual Environment
+venv/
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Dependency Management
+Pipfile
+Pipfile.lock
+poetry.lock
+
+# Django/Flask (if used)
+instance/
+*.sqlite3
+db.sqlite3
+migrations/
+
+# Misc
+*.DS_Store
+# Node
+node_modules
+# Package
+package
+# Dependencies
+dependencies
+# IDE
+.idea
+# VSCode
+.vscode
+# Build
+/build
+# Dist
+/dist
+# Logs
+/logs
