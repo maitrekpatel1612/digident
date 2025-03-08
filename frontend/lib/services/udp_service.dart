@@ -26,7 +26,6 @@ class UDPService {
       _setupSocketListeners();
       _startHeartbeat();
       _sendConnectMessage();
-      print("UDP Service, lookin good!");
     } catch (e) {
       onError?.call('Failed to initialize UDP service: $e');
       rethrow;
@@ -73,7 +72,6 @@ class UDPService {
     if (data.length == 4) {
       // _expectedChunks = data.buffer.asByteData().getInt32(0, Endian.little);
       incomingSize = data.buffer.asByteData().getInt32(0, Endian.little);
-      print("Incoming $incomingSize bytes!");
       _expectedChunks = (incomingSize / AppConfig.MAX_BUFFER_SIZE)
           .ceil(); // 1562 / 1024 = (1.52).ceil() = 2
 
