@@ -5,7 +5,9 @@ import 'package:flutter/material.dart';
 import '../services/udp_service.dart';
 
 class CameraViewWidget extends StatefulWidget {
-  const CameraViewWidget({super.key});
+  final Function(Uint8List) onFrameReceived;
+
+  const CameraViewWidget({super.key, required this.onFrameReceived});
 
   @override
   State<CameraViewWidget> createState() => _CameraViewWidgetState();
@@ -32,6 +34,7 @@ class _CameraViewWidgetState extends State<CameraViewWidget> {
           setState(() {
             _currentFrame = frameData;
             _errorMessage = null;
+            widget.onFrameReceived(frameData);
           });
         }
       };
@@ -135,29 +138,32 @@ class _CameraViewWidgetState extends State<CameraViewWidget> {
     return Stack(
       fit: StackFit.expand,
       children: [
-        Image.memory(
-          _currentFrame!,
-          gaplessPlayback: true,
-          fit: BoxFit.contain,
-          frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
-            return child;
-          },
-          errorBuilder: (context, error, stackTrace) {
-            return Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Icon(
-                    Icons.broken_image,
-                    size: 48,
-                    color: Theme.of(context).colorScheme.error,
-                  ),
-                  const SizedBox(height: 16),
-                  const Text('Error loading frame'),
-                ],
-              ),
-            );
-          },
+        Container(
+          color: Theme.of(context).scaffoldBackgroundColor,
+          child: Image.memory(
+            _currentFrame!,
+            gaplessPlayback: true,
+            fit: BoxFit.contain,
+            frameBuilder: (context, child, frame, wasSynchronouslyLoaded) {
+              return child;
+            },
+            errorBuilder: (context, error, stackTrace) {
+              return Center(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Icon(
+                      Icons.broken_image,
+                      size: 48,
+                      color: Theme.of(context).colorScheme.error,
+                    ),
+                    const SizedBox(height: 16),
+                    const Text('Error loading frame'),
+                  ],
+                ),
+              );
+            },
+          ),
         ),
         Positioned(
           top: 8,

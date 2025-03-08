@@ -1,0 +1,2 @@
+D:/Desktop/PROJECT/digident/frontend/android/app/.cxx/Debug/q4s733f4/x86/CMakeFiles/edit_cache.dir
+D:/Desktop/PROJECT/digident/frontend/android/app/.cxx/Debug/q4s733f4/x86/CMakeFiles/rebuild_cache.dir

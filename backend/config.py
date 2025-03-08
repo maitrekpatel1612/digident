@@ -1,6 +1,6 @@
 # config.py
 SERVER_CONFIG = {
-    'HOST': '172.27.33.57',
+    'HOST': '192.168.137.1',
     'PORT': 5000,
     'FRAME_WIDTH': 640,
     'FRAME_HEIGHT': 480,

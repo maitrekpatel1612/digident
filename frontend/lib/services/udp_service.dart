@@ -107,8 +107,8 @@ class UDPService {
     try {
       _socket?.send(
         'connect'.codeUnits,
-        InternetAddress(AppConfig.SERVER_IP),
-        AppConfig.SERVER_PORT,
+        InternetAddress(AppConfig.serverIp),
+        AppConfig.serverPort,
       );
     } catch (e) {
       onError?.call('Failed to send connect message: $e');
