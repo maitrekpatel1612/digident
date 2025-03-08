@@ -14,7 +14,6 @@ Digident is a comprehensive dental care solution that combines hardware and soft
 - **Real-time Camera Feed**: View live camera feed from the dental device
 - **Image Capture**: Save high-quality dental images for later reference
 - **Image Sharing**: Easily share dental images with professionals
-- **Dark/Light Mode**: Comfortable viewing experience in any environment
 - **User-friendly Interface**: Intuitive design for easy navigation
 
 ## Technical Architecture
@@ -122,8 +121,87 @@ If you would like to contribute to this project, please follow these steps:
 
 ## About
 
-This project is developed by the Students of IIITDM Jabalpur under the mentorship of **Dr. Punnet Tandon**.
+This project is developed by the Students of IIITDM Jabalpur under the mentorship of **Dr. Punnet Tandon** and co-mentorship of **Pritee Khanna**.
+
+# Digident - Dental Imaging and Analysis App
+
+A Flutter application for dental imaging, analysis, and condition detection using machine learning.
+
+## Features
+
+### 1. WiFi Connection Screen
+- Automatic scanning for available WiFi networks
+- Highlights the Digident camera server network
+- Seamless connection to the camera server
+- Real-time connection status updates
+- Automatic redirection to camera screen upon successful connection
+
+### 2. Camera View Screen
+- Real-time camera feed display from the dental camera
+- High-quality frame capture functionality
+- ML-powered image processing
+- Quick access to server settings
+- Supports both light and dark modes
+
+### 3. Frame Display Screen
+- High-resolution display of captured dental images
+- Advanced image saving features:
+  - Dedicated `/Download/Digident` folder
+  - Timestamp-based unique filenames
+  - Android 10+ storage compatibility
+  - Clear success notifications with save location
+- Universal sharing capabilities:
+  - System share sheet integration
+  - Multi-platform support
+- Modern UI elements:
+  - Gradient backgrounds
+  - Shadowed containers
+  - Rounded corners
+  - Adaptive theming
+
+### 4. ML Analysis Capabilities
+- Dental condition detection for:
+  - Caries
+  - Healthy teeth
+  - Plaque
+  - Calculus
+  - Gingivitis
+  - Periodontitis
+  - Dental Abscess
+  - Fluorosis
+  - Enamel Hypoplasia
+  - Dental Erosion
+- Confidence scoring system
+- Priority-based result sorting
+
+### 5. Results Display Screen
+- Processed image visualization
+- Detailed condition analysis:
+  - Percentage-based confidence scores
+  - Color-coded indicators
+  - Priority-sorted listings
+- Result sharing functionality
+- Easy navigation back to camera
+
+### 6. Server Settings Screen
+- IP and port configuration
+- Persistent settings storage
+- Connection testing
+- Default settings restoration
+- Built-in troubleshooting guide
+
+## Technical Details
+
+### Permissions
+- Storage access for saving images
+- WiFi connectivity
+- Location services for network scanning
+
+### System Requirements
+- Android API 29+ (Android 10 or higher)
+- Flutter 3.0 or higher
+- Dart SDK 3.0 or higher
 
 ## License
 
-This project is licensed under the MIT License - see the LICENSE file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
