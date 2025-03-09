@@ -1,12 +1,13 @@
-<p align="center">
-  <img src="frontend/assets/images/digident_banner.png" alt="Digident Logo"/>
-</p>
+# Digident - AI Based Futuristic Device for Dental Care
 
-<p align="center" style="font-size: 32px;">AI Based Futuristic Device for Dental Care</p>
+![Digident Logo](frontend/assets/images/digident_banner.png)
 
 ## Overview
 
-Digident is a comprehensive dental care solution that combines hardware and software to provide real-time dental analysis. The system consists of a Flutter mobile application that connects wirelessly to the Digident device via WiFi, allowing users to capture, view, and analyze dental images.
+Digident is a comprehensive dental care solution that combines hardware and
+software to provide real-time dental analysis. The system consists of a Flutter
+mobile application that connects wirelessly to the Digident device via WiFi,
+allowing users to capture, view, and analyze dental images.
 
 ## Features
 
@@ -36,7 +37,8 @@ Digident is a comprehensive dental care solution that combines hardware and soft
 
 ### Frontend Setup
 
-1. **Install Flutter**: Follow the instructions on the official [Flutter website](https://docs.flutter.dev/get-started/install) to install Flutter on your machine.
+1. **Install Flutter**: Follow the instructions on the official
+   [Flutter website](https://docs.flutter.dev/get-started/install) to install Flutter.
 
 2. **Clone the Repository**:
 
@@ -85,7 +87,7 @@ Digident is a comprehensive dental care solution that combines hardware and soft
 1. Frontend configuration (`frontend/lib/config/app_config.dart`):
 
     ```dart
-    static const String SERVER_IP = '192.168.137.1'; // Your computer or ESP32 IP address
+    static const String SERVER_IP = '192.168.137.1'; // Your computer IP
     ```
 
 2. Backend configuration (`backend/config.py`):
@@ -121,15 +123,13 @@ If you would like to contribute to this project, please follow these steps:
 
 ## About
 
-This project is developed by the Students of IIITDM Jabalpur under the mentorship of **Dr. Punnet Tandon** and co-mentorship of **Pritee Khanna**.
+This project is developed by the Students of IIITDM Jabalpur under the
+mentorship of **Dr. Punnet Tandon** and co-mentorship of **Pritee Khanna**.
 
-# Digident - Dental Imaging and Analysis App
-
-A Flutter application for dental imaging, analysis, and condition detection using machine learning.
-
-## Features
+## Detailed Features
 
 ### 1. WiFi Connection Screen
+
 - Automatic scanning for available WiFi networks
 - Highlights the Digident camera server network
 - Seamless connection to the camera server
@@ -137,6 +137,7 @@ A Flutter application for dental imaging, analysis, and condition detection usin
 - Automatic redirection to camera screen upon successful connection
 
 ### 2. Camera View Screen
+
 - Real-time camera feed display from the dental camera
 - High-quality frame capture functionality
 - ML-powered image processing
@@ -144,6 +145,7 @@ A Flutter application for dental imaging, analysis, and condition detection usin
 - Supports both light and dark modes
 
 ### 3. Frame Display Screen
+
 - High-resolution display of captured dental images
 - Advanced image saving features:
   - Dedicated `/Download/Digident` folder
@@ -160,6 +162,7 @@ A Flutter application for dental imaging, analysis, and condition detection usin
   - Adaptive theming
 
 ### 4. ML Analysis Capabilities
+
 - Dental condition detection for:
   - Caries
   - Healthy teeth
@@ -175,6 +178,7 @@ A Flutter application for dental imaging, analysis, and condition detection usin
 - Priority-based result sorting
 
 ### 5. Results Display Screen
+
 - Processed image visualization
 - Detailed condition analysis:
   - Percentage-based confidence scores
@@ -184,6 +188,7 @@ A Flutter application for dental imaging, analysis, and condition detection usin
 - Easy navigation back to camera
 
 ### 6. Server Settings Screen
+
 - IP and port configuration
 - Persistent settings storage
 - Connection testing
@@ -193,15 +198,18 @@ A Flutter application for dental imaging, analysis, and condition detection usin
 ## Technical Details
 
 ### Permissions
+
 - Storage access for saving images
 - WiFi connectivity
 - Location services for network scanning
 
 ### System Requirements
+
 - Android API 29+ (Android 10 or higher)
 - Flutter 3.0 or higher
 - Dart SDK 3.0 or higher
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
+for details.

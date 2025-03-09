@@ -1,6 +1,7 @@
 # Docker Setup for Digident
 
-This document provides instructions for running the Digident project using Docker containers.
+This document provides instructions for running the Digident project using Docker
+containers.
 
 ## Prerequisites
 
@@ -30,14 +31,15 @@ docker-compose up --build
 ```
 
 This command will:
+
 - Build the Docker images for both backend and frontend
 - Start the containers
 - Set up the network between them
 
 ### 3. Access the Application
 
-- **Backend API**: http://localhost:5000
-- **Frontend Web Interface**: http://localhost:8080
+- **Backend API**: `http://localhost:5000`
+- **Frontend Web Interface**: `http://localhost:8080`
 
 ## Configuration
 
@@ -46,10 +48,12 @@ This command will:
 You can modify the environment variables in the `docker-compose.yml` file:
 
 #### Backend
+
 - `SERVER_HOST`: The host IP address (default: 0.0.0.0)
 - `SERVER_PORT`: The port number (default: 5000)
 
 #### Frontend
+
 - `SERVER_IP`: The backend server IP (default: backend)
 - `SERVER_PORT`: The backend server port (default: 5000)
 
@@ -96,16 +100,19 @@ docker-compose down
 If the frontend cannot connect to the backend:
 
 1. Check that both containers are running:
+
    ```sh
    docker-compose ps
    ```
 
 2. Verify network connectivity:
+
    ```sh
    docker network inspect digident-network
    ```
 
 3. Check backend logs:
+
    ```sh
    docker-compose logs backend
    ```
@@ -124,11 +131,13 @@ ports:
 For production deployment:
 
 1. Build optimized images:
+
    ```sh
    docker-compose -f docker-compose.yml -f docker-compose.prod.yml build
    ```
 
 2. Run in detached mode:
+
    ```sh
    docker-compose -f docker-compose.yml -f docker-compose.prod.yml up -d
    ```
@@ -137,4 +146,4 @@ For production deployment:
 
 - [Docker Documentation](https://docs.docker.com/)
 - [Flutter Web Documentation](https://flutter.dev/docs/deployment/web)
-- [Python Docker Guide](https://docs.docker.com/language/python/) 
+- [Python Docker Guide](https://docs.docker.com/language/python/)

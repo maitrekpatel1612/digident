@@ -285,7 +285,7 @@ class ResultDisplayScreen extends StatelessWidget {
                   decoration: BoxDecoration(
                     shape: BoxShape.circle,
                     border: Border.all(
-                      color: confidenceColor.withOpacity(0.5),
+                      color: confidenceColor.withAlpha(128),
                       width: 3,
                     ),
                   ),
