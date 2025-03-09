@@ -1,0 +1,31 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    restart: always
+    environment:
+      - PRODUCTION=true
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '0.5'
+          memory: 512M
+    # Use Nginx to serve the built web app in production
+    image: nginx:alpine
+    volumes:
+      - ./frontend/build/web:/usr/share/nginx/html
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf 

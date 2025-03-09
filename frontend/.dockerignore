@@ -1,0 +1,48 @@
+# Git
+.git
+.gitignore
+
+# Flutter/Dart
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.packages
+.pub-cache/
+.pub/
+build/
+*.lock
+*.iml
+
+# Android
+android/.gradle
+android/app/build
+android/build
+android/gradle
+android/gradlew
+android/gradlew.bat
+android/local.properties
+android/key.properties
+
+# iOS
+ios/Pods/
+ios/Flutter/App.framework
+ios/Flutter/Flutter.framework
+ios/Flutter/Generated.xcconfig
+ios/Flutter/app.flx
+ios/Flutter/app.zip
+ios/Flutter/flutter_assets/
+ios/.symlinks/
+ios/Runner.xcworkspace
+
+# Docker
+Dockerfile
+.dockerignore
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Logs
+*.log 

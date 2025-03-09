@@ -1,0 +1,38 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    restart: unless-stopped
+    networks:
+      - digident-network
+    volumes:
+      - ./backend:/app
+    environment:
+      - SERVER_HOST=0.0.0.0
+      - SERVER_PORT=5000
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    networks:
+      - digident-network
+    volumes:
+      - ./frontend:/app
+    depends_on:
+      - backend
+    environment:
+      - SERVER_IP=backend
+      - SERVER_PORT=5000
+
+networks:
+  digident-network:
+    driver: bridge 
